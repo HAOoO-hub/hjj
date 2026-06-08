@@ -1,0 +1,17 @@
+// compiler_workspace_demo.cmini：提供统一编译工作台的默认演示源程序
+int main() {
+int a;
+    int b;
+int c;
+    a = 10;
+b = 5;
+if (a > b) {
+c = a + b;
+} else {
+        c = a - b;
+}
+while (b > 0) {
+b = b - 1;
+}
+return c;
+}

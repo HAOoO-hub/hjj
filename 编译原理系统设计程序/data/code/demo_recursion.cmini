@@ -1,0 +1,24 @@
+// ========================
+// 递归函数示例：阶乘计算
+// ========================
+
+int factorial(int n) {
+    // 递归终止条件
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    
+    // 递归调用
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int n;
+    int result;
+    
+    // 计算 5! = 120
+    n = 5;
+    result = factorial(n);
+    
+    return 0;
+}

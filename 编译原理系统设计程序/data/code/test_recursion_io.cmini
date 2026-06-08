@@ -1,0 +1,23 @@
+// ========================
+// 递归测试 4 - 带 I/O 的阶乘
+// ========================
+// 从用户输入读取 n，计算 factorial(n)
+
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int n;
+    int result;
+    
+    read n;
+    result = factorial(n);
+    write result;
+    
+    return 0;
+}

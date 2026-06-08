@@ -1,0 +1,39 @@
+// ========================
+// 高级错误检测样例
+// 展示更多语义和类型错误
+// ========================
+
+// 正确定义的函数（用于测试调用错误）
+int add(int a, int b) {
+    return a + b;
+}
+
+void print_value(int x) {
+    // void函数，无返回值
+}
+
+int main() {
+    int x;
+    int y;
+    
+    // 错误1: 常量未初始化
+    const int UNINIT_CONST;  // ❌ 常量必须在声明时初始化
+    
+    // 错误2: 变量名与函数名冲突
+    int add;  // ❌ add已经是函数名
+    
+    // 错误3: 使用未定义的变量
+    z = 10;  // ❌ z未声明
+    
+    // 错误4: 函数未定义就调用
+    undefined_func();  // ❌ 函数undefined_func未定义
+    
+    // 错误5: 函数参数个数不匹配
+    add(1);           // ❌ add需要2个参数，只给了1个
+    add(1, 2, 3);     // ❌ add需要2个参数，给了3个
+    
+    // 错误6: 使用未定义的函数
+    int result = multiply(3, 4);  // ❌ multiply函数未定义
+    
+    return 0;
+}

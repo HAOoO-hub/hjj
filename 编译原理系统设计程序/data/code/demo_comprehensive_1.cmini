@@ -1,0 +1,110 @@
+// ========================
+// 综合功能展示样例 1
+// 重点展示：常量、复杂表达式、函数调用
+// ========================
+
+// 1. 函数定义：带多个参数
+int add(int a, int b) {
+    return a + b;
+}
+
+// 2. 函数定义：if/else 分支结构
+int max(int a, int b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+// 3. 函数调用：嵌套调用
+int compute(int x, int y) {
+    // 4. 变量声明带初始化
+    int sum = x + y;
+    // 5. 函数调用赋值
+    int result = add(sum, 10);
+    return result;
+}
+
+int main() {
+    // 6. 常量声明（必须初始化）
+    const int MAX_VALUE = 100;
+    const int MIN_VALUE = 0;
+    const int STEP = 5;
+    
+    // 7. 变量声明
+    int x;
+    int y;
+    int z;
+    int result;
+
+    // 8. 赋值语句
+    x = 10;
+    y = 20;
+
+    // 9. while 循环
+    while (x < 15) {
+        // 10. 自增（通过赋值实现）
+        x = x + 1;
+        y = y + 2;
+    }
+
+    // 11. 算术表达式（四则运算）
+    z = x + y * 2;
+
+    // 12. 关系运算符
+    if (z > 50) {
+        z = z - 10;
+    }
+
+    // 13. 逻辑运算符 && ||
+    if (x > 0 && y > 0) {
+        z = x + y;
+    }
+
+    // 14. 函数调用
+    z = add(x, y);
+
+    // 15. 嵌套函数调用
+    z = compute(x, y);
+
+    // 16. 比较运算符 == !=
+    if (z == 0) {
+        z = 100;
+    }
+
+    // 17. 不等号 !=
+    if (z != 100) {
+        z = z + 1;
+    }
+
+    // 18. 括号表达式
+    z = (x + y) * 2;
+
+    // 19. 复杂嵌套表达式
+    z = add(max(x, y), compute(x, y));
+    
+    // 20. 使用常量进行计算
+    result = MAX_VALUE + MIN_VALUE;
+    z = result - STEP;
+    
+    // 21. 在条件中使用常量
+    if (z < MAX_VALUE) {
+        z = z + STEP;
+    }
+    
+    // 22. 在循环中使用常量
+    while (z < MAX_VALUE) {
+        z = z + STEP;
+    }
+    
+    // 23. 常量和变量混合运算
+    result = MAX_VALUE - MIN_VALUE + STEP;
+    
+    // 24. 复杂条件判断
+    if (result > 50 && result < 150) {
+        z = result / STEP;
+    }
+
+    return 0;
+}

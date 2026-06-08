@@ -1,0 +1,11 @@
+// 测试：在循环外使用 break（应该报错）
+
+int main() {
+    int x;
+    x = 5;
+    
+    // 这个 break 不在循环内，应该报错
+    break;
+    
+    return 0;
+}

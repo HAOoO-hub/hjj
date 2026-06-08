@@ -1,0 +1,12 @@
+// ide_ok_01.cmini：提供4.3迷你IDE的合法代码样例
+int add(int a, int b) {
+    int c;
+    c = a + b;
+    return c;
+}
+
+int main() {
+    int x;
+    x = add(1, 2);
+    return x;
+}

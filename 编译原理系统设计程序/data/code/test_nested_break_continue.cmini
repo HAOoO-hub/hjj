@@ -1,0 +1,58 @@
+// ========================
+// 嵌套循环中的 Break 和 Continue
+// ========================
+
+int main() {
+    int i;
+    int j;
+    int count;
+    int sum;
+    
+    // 测试1: 外层循环的 break
+    i = 1;
+    count = 0;
+    
+    while (i <= 5) {
+        j = 1;
+        
+        while (j <= 5) {
+            count = count + 1;
+            
+            // 当 j == 3 时跳出内层循环
+            if (j == 3) {
+                break;
+            }
+            
+            j = j + 1;
+        }
+        
+        i = i + 1;
+    }
+    
+    // count 应该是 2 * 5 = 10 (每次内层循环执行2次，共5次外层循环)
+    
+    // 测试2: 内层循环的 continue
+    i = 1;
+    sum = 0;
+    
+    while (i <= 3) {
+        j = 1;
+        
+        while (j <= 5) {
+            // 跳过 j == 3 的情况
+            if (j == 3) {
+                j = j + 1;
+                continue;
+            }
+            
+            sum = sum + j;
+            j = j + 1;
+        }
+        
+        i = i + 1;
+    }
+    
+    // sum 应该是 (1+2+4+5) * 3 = 12 * 3 = 36
+    
+    return 0;
+}

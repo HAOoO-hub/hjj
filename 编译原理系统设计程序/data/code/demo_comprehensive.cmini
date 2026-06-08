@@ -1,0 +1,135 @@
+// ========================
+// 综合功能展示样例
+// 展示系统支持的全部语法特性
+// ========================
+
+// 1. 函数定义：带多个参数，int 返回类型
+int add(int a, int b) {
+    return a + b;
+}
+
+// 2. 函数定义：if/else 分支结构
+int max(int a, int b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+// 3. 函数调用：调用上面定义的函数
+int compute(int x, int y) {
+    // 4. 变量声明带初始化
+    int sum = x + y;
+    // 5. 函数调用赋值
+    int result = add(sum, 10);
+    return result;
+}
+
+// 6. 递归函数：阶乘计算
+int factorial(int n) {
+    // 7. 递归终止条件（使用 || 避免解释器问题）
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    // 8. 递归调用
+    return n * factorial(n - 1);
+}
+
+// 9. 递归函数：斐波那契数列
+int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    // 10. 多次递归调用
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    // 11. 常量声明（必须初始化）
+    const int MAX_VALUE = 100;
+    const int MIN_VALUE = 0;
+    const int STEP = 5;
+    
+    // 12. 变量声明
+    int x;
+    int y;
+    int z;
+    int result;
+
+    // 13. 赋值语句
+    x = 10;
+    y = 20;
+
+    // 14. while 循环
+    while (x < 15) {
+        // 15. 自增（通过赋值实现）
+        x = x + 1;
+        y = y + 2;
+    }
+
+    // 16. 算术表达式（四则运算）
+    z = x + y * 2;
+
+    // 17. 关系运算符
+    if (z > 50) {
+        z = z - 10;
+    }
+
+    // 18. 逻辑运算符 && ||
+    if (x > 0 && y > 0) {
+        z = x + y;
+    }
+
+    // 19. 函数调用
+    z = add(x, y);
+
+    // 20. 嵌套函数调用
+    z = compute(x, y);
+
+    // 21. 比较运算符 == !=
+    if (z == 0) {
+        z = 100;
+    }
+
+    // 22. 不等号 !=
+    if (z != 100) {
+        z = z + 1;
+    }
+
+    // 23. 括号表达式
+    z = (x + y) * 2;
+
+    // 24. 复杂嵌套表达式
+    z = add(max(x, y), compute(x, y));
+    
+    // 25. 使用常量进行计算
+    result = MAX_VALUE + MIN_VALUE;
+    z = result - STEP;
+    
+    // 26. 在条件中使用常量
+    if (z < MAX_VALUE) {
+        z = z + STEP;
+    }
+    
+    // 27. 在循环中使用常量
+    while (z < MAX_VALUE) {
+        z = z + STEP;
+    }
+    
+    // 28. 递归调用：计算阶乘
+    result = factorial(5);  // 5! = 120
+    
+    // 29. 递归结果参与运算
+    z = factorial(3) + 10;  // 6 + 10 = 16
+    
+    // 31. 常量和递归结合使用
+    if (result < MAX_VALUE) {
+        z = result + STEP;
+    }
+
+    return 0;
+}

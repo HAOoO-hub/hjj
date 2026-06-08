@@ -1,0 +1,4 @@
+# sample_log_01.txt：提供4.1扫描器的基础日志样例
+2026-05-10 08:17:42 INFO ip=172.16.8.31 user=root status=200
+2026-05-10 08:18:15 ERROR 172.16.8.31 root User root logged in via SSH from 192.168.1.100
+

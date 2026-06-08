@@ -1,0 +1,19 @@
+// ========================
+// 递归测试 1 - 最简单的阶乘（单层条件）
+// ========================
+// 这个测试使用简单的 if-else，避免逻辑运算符
+// factorial(5) = 120
+
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int result;
+    result = factorial(5);
+    return result;
+}

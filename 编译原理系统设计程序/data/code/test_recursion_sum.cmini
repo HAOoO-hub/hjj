@@ -1,0 +1,18 @@
+// ========================
+// 递归测试 2 - 累加求和
+// ========================
+// sum(10) = 1+2+3+...+10 = 55
+
+int sum(int n) {
+    if (n <= 0) {
+        return 0;
+    } else {
+        return n + sum(n - 1);
+    }
+}
+
+int main() {
+    int result;
+    result = sum(10);
+    return result;
+}

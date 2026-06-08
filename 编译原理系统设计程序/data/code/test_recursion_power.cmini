@@ -1,0 +1,18 @@
+// ========================
+// 递归测试 3 - 计算幂
+// ========================
+// power(2, 10) = 2^10 = 1024
+
+int power(int base, int exp) {
+    if (exp <= 0) {
+        return 1;
+    } else {
+        return base * power(base, exp - 1);
+    }
+}
+
+int main() {
+    int result;
+    result = power(2, 10);
+    return result;
+}
